@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+<title>72 / innerHTML</title>
+<script type="text/javascript">
+state = "N";
+
+function change(x)
+{
+  m = document.getElementById(x);
+  if (state == "N") {
+    state = "P";
+    m.innerHTML = "Buona Pasqua!";
+    m.style.color = "red";
+  }
+  else {
+    state = "N";
+    m.innerHTML = "Buon Natale!";
+    m.style.color = "blue";
+  }
+}
+
+
+
+</script>
+</head>
+<body>
+	
+<p id="message">Seleziona il colore dello sfondo!</p>
+
+<p>P.S. Fai click <span onclick="change('message')">QUI</span> per cambiare il messaggio di auguri.</p>
+
+<form name="f"  method="get">
+<p>
+Seleziona il colore dello sfondo!
+<input type="radio" name="frt" value="giallo">
+giallo <br>
+<input type="radio" name="frt" value="blu">
+blu<br>
+<input type="radio" name="frt" value="rosso">
+rosso <br>
+<input type="submit">
+<input type="reset">
+</p>
+</form>
+
+
+
+</body>
+</html>
